@@ -513,8 +513,7 @@ function PlaylistView({ playlist }: { playlist: Playlist }) {
         <div
           className="w-[140px] h-[140px] rounded-md shrink-0 flex items-center justify-center text-[60px] shadow-lg"
           style={{
-            background:
-              "linear-gradient(160deg, #fb4368, #c0264a 60%, #5e1129)",
+            background: playlistGradient(playlist.id),
           }}
         >
           {playlist.emoji}
@@ -733,8 +732,7 @@ function PlaylistCard({
         <div
           className="absolute inset-0 flex items-center justify-center text-[64px]"
           style={{
-            background:
-              "linear-gradient(160deg, #fb4368 0%, #b21e3f 60%, #4d0e1c 100%)",
+            background: playlistGradient(playlist.id),
           }}
         >
           {playlist.emoji}
@@ -802,22 +800,28 @@ function AlbumArt({ track }: { track: Track | null }) {
   );
 }
 
+const GRADIENT_PALETTES: [string, string][] = [
+  ["#fb4368", "#7c1933"],
+  ["#3478f6", "#0a3a8a"],
+  ["#34c759", "#0d4a1f"],
+  ["#ff9f0a", "#7a3f06"],
+  ["#bf5af2", "#4a1a6e"],
+  ["#5ac8fa", "#1a4a6a"],
+  ["#ffd60a", "#7a6204"],
+];
+
+function playlistGradient(id: string): string {
+  const [a, b] = GRADIENT_PALETTES[seedHash(id) % GRADIENT_PALETTES.length];
+  return `linear-gradient(160deg, ${a} 0%, ${b} 100%)`;
+}
+
 /**
  * Deterministic gradient tile derived from a seed string. Used when
  * cover art is missing or fails to load.
  */
 function FallbackTile({ seed }: { seed?: string } = {}) {
-  const palettes = [
-    ["#fb4368", "#7c1933"],
-    ["#3478f6", "#0a3a8a"],
-    ["#34c759", "#0d4a1f"],
-    ["#ff9f0a", "#7a3f06"],
-    ["#bf5af2", "#4a1a6e"],
-    ["#5ac8fa", "#1a4a6a"],
-    ["#ffd60a", "#7a6204"],
-  ];
-  const idx = seed ? seedHash(seed) % palettes.length : 0;
-  const [a, b] = palettes[idx];
+  const idx = seed ? seedHash(seed) % GRADIENT_PALETTES.length : 0;
+  const [a, b] = GRADIENT_PALETTES[idx];
   return (
     <div
       style={{
