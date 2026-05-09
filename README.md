@@ -1,4 +1,4 @@
-# kwasi.dev
+# kwasi
 
 a macOS desktop running in the browser. no backend, no database — everything is client-side.
 
