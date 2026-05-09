@@ -757,6 +757,17 @@ export const notes: Note[] = [
     collapsibleSections: true,
     alwaysExpandedHeadings: [],
     blocks: [
+      { type: "heading", text: "bible verses" },
+      {
+        type: "list",
+        items: [
+          "proverbs 4:23 — above all else, guard your heart, for everything you do flows from it.",
+          "philippians 4:13 — i can do everything through Him who gives me strength.",
+          "psalm 46:10 — be still, and know that i am God.",
+          "john 10:10 — the thief comes only to steal and kill and destroy; i have come that they may have life, and have it to the full.",
+          "romans 12:2 — do not conform to the pattern of this world, but be transformed by the renewing of your mind. then you will be able to test and approve what God's will is—his good, pleasing and perfect will.",
+        ],
+      },
       { type: "heading", text: "anime fights" },
       {
         type: "list",
