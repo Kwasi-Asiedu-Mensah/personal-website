@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light theme (default) */
+:root {
+  --window-bg: #fafafa;
+  --window-text: #1a1a1a;
+  --window-text-soft: #404040;
+  --window-text-muted: rgba(0, 0, 0, 0.5);
+  --window-text-faint: rgba(0, 0, 0, 0.35);
+  --window-border: rgba(0, 0, 0, 0.08);
+  --window-divider: rgba(0, 0, 0, 0.06);
+  --row-hover: rgba(0, 0, 0, 0.04);
+  --row-active: rgba(0, 0, 0, 0.07);
+  --titlebar-bg: rgba(245, 245, 245, 0.92);
+  --link: #e08a14;
+  --link-hover: #b66808;
+  --pill-border: rgba(0, 0, 0, 0.15);
+  --pill-bg: rgba(0, 0, 0, 0.02);
+  --shadow-window: 0 30px 80px rgba(0, 0, 0, 0.45);
+  --searchbar-bg: rgba(0, 0, 0, 0.04);
+  --searchbar-border: rgba(0, 0, 0, 0.06);
+  --section-label: rgba(0, 0, 0, 0.5);
+  --dock-bg: rgba(255, 255, 255, 0.28);
+  --dock-border: rgba(255, 255, 255, 0.4);
+  --dock-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  --dock-divider: rgba(255, 255, 255, 0.25);
+  --note-selected-bg: rgba(255, 199, 50, 0.55);
+  --menubar-bg: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] {
+  --window-bg: #1a1a1a;
+  --window-text: #fafafa;
+  --window-text-soft: rgba(255, 255, 255, 0.85);
+  --window-text-muted: rgba(255, 255, 255, 0.55);
+  --window-text-faint: rgba(255, 255, 255, 0.35);
+  --window-border: rgba(255, 255, 255, 0.08);
+  --window-divider: rgba(255, 255, 255, 0.06);
+  --row-hover: rgba(255, 255, 255, 0.04);
+  --row-active: rgba(255, 255, 255, 0.07);
+  --titlebar-bg: #2a2a2a;
+  --link: #ffcc33;
+  --link-hover: #ffe066;
+  --pill-border: rgba(255, 255, 255, 0.18);
+  --pill-bg: rgba(255, 255, 255, 0.02);
+  --shadow-window: 0 30px 80px rgba(0, 0, 0, 0.6);
+  --searchbar-bg: rgba(255, 255, 255, 0.06);
+  --searchbar-border: rgba(255, 255, 255, 0.08);
+  --section-label: rgba(255, 255, 255, 0.45);
+  --dock-bg: rgba(20, 20, 20, 0.55);
+  --dock-border: rgba(255, 255, 255, 0.12);
+  --dock-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+  --dock-divider: rgba(255, 255, 255, 0.1);
+  --note-selected-bg: rgba(255, 199, 50, 0.55);
+  --menubar-bg: rgba(0, 0, 0, 0.25);
+}
+
+html,
+body {
+  background: #000;
+  color: var(--window-text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+    "SF Pro Text", system-ui, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.005em;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.note-link {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  transition: color 120ms ease;
+}
+.note-link:hover {
+  color: var(--link-hover);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 120, 120, 0.25);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 120, 120, 0.4);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes boot-progress {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0%); }
+}
+
+@keyframes dock-enter {
+  0%   { transform: translateY(100%); opacity: 0; }
+  55%  { transform: translateY(-15%); opacity: 1; }
+  80%  { transform: translateY(5%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes dock-exit {
+  0%   { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(100%) scale(0.8); opacity: 0; }
+}
+
+/* Window appear: grows from center-right, used for window open animations */
+@keyframes scale-in {
+  0%   { opacity: 0; transform: scaleX(0) translateX(50%); }
+  20%  { opacity: 1; }
+  100% { opacity: 1; transform: scaleX(1) translateX(0); }
+}
+.animate-scale-in { animation: scale-in 0.3s cubic-bezier(0.17, 0.67, 0.29, 1); }
+
+/* Weather animations — used by the Weather app */
+@keyframes weather-cloud-pan {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(var(--cloud-pan-distance, 30%)); }
+}
+@keyframes weather-rain-drop {
+  0%   { transform: translateY(-10px) translateX(0) rotate(12deg); opacity: 0; }
+  20%  { opacity: 1; }
+  100% { transform: translateY(120px) translateX(var(--rain-drift-x, 6px)) rotate(12deg); opacity: 0; }
+}
+@keyframes weather-snow-flake {
+  0%   { transform: translateY(-10px) translateX(0) scale(0.8); opacity: 0; }
+  20%  { opacity: 1; }
+  50%  { transform: translateY(40px) translateX(var(--snow-drift-x, 8px)) scale(1); opacity: 1; }
+  100% { transform: translateY(80px) translateX(0px) scale(1); opacity: 0; }
+}
+@keyframes weather-cloud-drift {
+  0%   { transform: translateX(0) translateY(0); }
+  50%  { transform: translateX(var(--cloud-drift-x, 8px)) translateY(var(--cloud-drift-y, 0px)); }
+  100% { transform: translateX(0) translateY(0); }
+}
+@keyframes weather-lightning {
+  0%, 90%, 100% { opacity: 0; }
+  92%, 96%      { opacity: 1; }
+}
+.weather-cloud-pan {
+  animation: weather-cloud-pan var(--cloud-pan-duration, 14s) ease-in-out infinite alternate;
+}
+.weather-cloud-drift {
+  animation: weather-cloud-drift var(--cloud-drift-duration, 18s) ease-in-out infinite;
+}

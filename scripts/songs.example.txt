@@ -1,0 +1,13 @@
+# Your favorite tracks. One per line. Format:
+#   Song Title — Artist
+# Lines starting with # are ignored. Blank lines are fine.
+# Run:
+#   node scripts/fetch-tracks.mjs scripts/songs.example.txt > /tmp/tracks.txt
+# Then paste the contents of /tmp/tracks.txt into the TRACKS array
+# in lib/music-data.ts.
+
+Day 'N' Nite — Kid Cudi
+Flashing Lights — Kanye West
+Houdini — Dua Lipa
+Never Loved — Massane
+positions — Ariana Grande

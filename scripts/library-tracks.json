@@ -1,0 +1,628 @@
+[
+  {
+    "id": "zion",
+    "title": "Zion",
+    "artist": "AratheJay",
+    "album": "The Odyssey",
+    "duration": 175,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e2/b0/bd/e2b0bde9-1130-75d6-2ee3-e080e7f8a64a/199538955651.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/58/3b/1e/583b1e87-4cea-695a-bd78-0066355b3e03/mzaf_9217654270632273663.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Zion AratheJay",
+      "search": "Zion AratheJay"
+    }
+  },
+  {
+    "id": "ara-no-dey-sleep",
+    "title": "Ara No Dey Sleep",
+    "artist": "AratheJay",
+    "album": "The Odyssey",
+    "duration": 192,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e2/b0/bd/e2b0bde9-1130-75d6-2ee3-e080e7f8a64a/199538955651.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4b/e1/3c/4be13c94-3f15-c2cc-73a9-6c743efe8e87/mzaf_7029756274193460351.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Ara No Dey Sleep AratheJay",
+      "search": "Ara No Dey Sleep AratheJay"
+    }
+  },
+  {
+    "search": "Put Am On God AratheJay",
+    "error": "no-match"
+  },
+  {
+    "id": "gone-girl",
+    "title": "Gone Girl",
+    "artist": "Obongjayar & Sarz",
+    "album": "Sweetness - EP",
+    "duration": 254,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/77/49/24/7749247a-8579-29c9-81c5-cefa5df23779/196292113969.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/a4/00/2b/a4002bdc-d8c6-f45e-547d-105205f95123/mzaf_13801715977932529026.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Gone Girl 4:14 Obongjayar Sarz",
+      "search": "Gone Girl 4:14 Obongjayar Sarz"
+    }
+  },
+  {
+    "id": "it-bend-like-banana",
+    "title": "It Bend Like Banana",
+    "artist": "Vybz Kartel",
+    "album": "It Bend Like Banana - Single",
+    "duration": 175,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/a9/b4/27/a9b42731-b76c-7c54-f74f-f7ddc1b715a1/889176313721.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/18/29/ba/1829baac-2fe7-a9f7-0299-a81c927e2a75/mzaf_972538219450836702.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Beg You Vybz Kartel",
+      "search": "Beg You Vybz Kartel"
+    }
+  },
+  {
+    "id": "welcome-home",
+    "title": "Welcome Home",
+    "artist": "Osibisa",
+    "album": "Sunshine Day - The Pye/Bronze Anthology",
+    "duration": 255,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/9a/ec/78/9aec785d-9ee6-0434-3a71-a13547b21d74/5414939925061.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/b8/b3/c0/b8b3c091-554a-35df-ee7f-42b91486d456/mzaf_18369198927707130018.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Welcome Home Osibisa",
+      "search": "Welcome Home Osibisa"
+    }
+  },
+  {
+    "id": "fun",
+    "title": "FUN",
+    "artist": "Rema",
+    "album": "FUN - Single",
+    "duration": 189,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/54/40/4b/54404b26-54a2-3b3c-3dcd-1b60c67605f5/25UM1IM20648.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/aa/e3/47/aae34760-cffb-0ac4-30a2-6cabe06fee63/mzaf_2185599351128826358.plus.aac.p.m4a",
+    "_debug": {
+      "query": "FUN Rema",
+      "search": "FUN Rema"
+    }
+  },
+  {
+    "id": "the-morning-live",
+    "title": "The Morning (Live)",
+    "artist": "The Weeknd",
+    "album": "Live At SoFi Stadium",
+    "duration": 200,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/03/2d/c1/032dc13a-dce4-672a-b501-d16d3b31be07/23UMGIM20988.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8b/95/dd/8b95ddea-b54d-b081-8bde-7ea8b73fa072/mzaf_10723066349386508326.plus.aac.p.m4a",
+    "_debug": {
+      "query": "The Morning Weeknd House of Balloons",
+      "search": "The Morning Weeknd House of Balloons"
+    }
+  },
+  {
+    "id": "obra-feat-mac-m",
+    "title": "Obra (feat. Mac M)",
+    "artist": "DarkoVibes",
+    "album": "Obra (feat. Mac M) - Single",
+    "duration": 244,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b2/68/67/b268679c-95a6-de45-35b3-26a54f83b3f9/766214665076.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/82/53/f8/8253f8a5-144e-2c0b-29bc-e693e65944a5/mzaf_6468879000990296041.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Obra DarkoVibes Mac M",
+      "search": "Obra DarkoVibes Mac M"
+    }
+  },
+  {
+    "id": "my-size-feat-darkovibes-joey-b",
+    "title": "My Size (feat. DarkoVibes & Joey B)",
+    "artist": "Juls & King Promise",
+    "album": "Sounds of My World",
+    "duration": 226,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a5/63/09/a5630957-0cc3-c4a2-ab27-5a7059067cfa/196292241143.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/93/fe/72/93fe72a3-b060-5363-1579-a8bb056aff26/mzaf_7908255380135096268.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Ranger Joey B Darkovibes",
+      "search": "Ranger Joey B Darkovibes"
+    }
+  },
+  {
+    "id": "tonight",
+    "title": "Tonight",
+    "artist": "Nonso Amadi",
+    "album": "Tonight - Single",
+    "duration": 237,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/1b/d1/87/1bd187cf-b5d8-ca32-0a34-3b279ea37b33/5054960019669_cover.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b3/11/a6/b311a63b-9eb3-ddf1-9134-3c1eb7530b63/mzaf_12596094618678932732.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Tonight Nonso Amadi",
+      "search": "Tonight Nonso Amadi"
+    }
+  },
+  {
+    "id": "plastic-100-c",
+    "title": "Plastic 100°C",
+    "artist": "Sampha",
+    "album": "Process",
+    "duration": 316,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/95/8d/ed/958ded66-ec58-2347-caa3-dfa2c0e417e1/889030015860.png/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/dd/fe/c9/ddfec95e-3754-ee3d-2036-262d165aa848/mzaf_6166519756992547263.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Plastic 100 Sampha Process",
+      "search": "Plastic 100 Sampha Process"
+    }
+  },
+  {
+    "id": "yosemite",
+    "title": "YOSEMITE",
+    "artist": "Travis Scott",
+    "album": "ASTROWORLD",
+    "duration": 150,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/30/66/90/306690d4-2a29-402e-e406-6b319ce7731a/886447227169.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/d9/8d/e8/d98de86e-b1e8-4262-1741-695c9c4c2d75/mzaf_8199446383486090854.plus.aac.p.m4a",
+    "_debug": {
+      "query": "5 Percent Tint Travis Scott Astroworld",
+      "search": "5 Percent Tint Travis Scott Astroworld"
+    }
+  },
+  {
+    "id": "sunshine",
+    "title": "Sunshine",
+    "artist": "Joey B",
+    "album": "Darryl",
+    "duration": 135,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/ee/2e/f9/ee2ef933-4af8-83ba-d064-20401fd83f6e/cover.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/06/07/7d/06077d3f-c837-772a-c2b1-a09822987746/mzaf_15423081998379118089.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Sunshine Joey B Darryl",
+      "search": "Sunshine Joey B Darryl"
+    }
+  },
+  {
+    "id": "pch",
+    "title": "PCH",
+    "artist": "Jaden",
+    "album": "CTV2",
+    "duration": 351,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ed/72/c3/ed72c390-33d2-fa17-9c82-d2475e01bf50/CTV2-artwork.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/75/b2/1f/75b21f17-75aa-975a-1b12-44292c6c7a84/mzaf_1529053728645723274.plus.aac.p.m4a",
+    "_debug": {
+      "query": "PCH Jaden CTV2",
+      "search": "PCH Jaden CTV2"
+    }
+  },
+  {
+    "id": "kora-sings",
+    "title": "Kora Sings",
+    "artist": "Sampha",
+    "album": "Process",
+    "duration": 258,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/95/8d/ed/958ded66-ec58-2347-caa3-dfa2c0e417e1/889030015860.png/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/68/7d/a2/687da27f-9aba-05d0-9706-cfb68e780359/mzaf_4981779018777806895.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Kora Sings Sampha Process",
+      "search": "Kora Sings Sampha Process"
+    }
+  },
+  {
+    "id": "take-care-feat-rihanna",
+    "title": "Take Care (feat. Rihanna)",
+    "artist": "Drake",
+    "album": "Take Care (Deluxe Version)",
+    "duration": 277,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d2/53/62/d2536245-b94c-b3fd-7168-9512f655f6d4/00602527899091.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/41/ad/df/41addf10-dff4-06f6-9109-fd24959cba0f/mzaf_3571059677903912007.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Marvins Room Drake Take Care",
+      "search": "Marvins Room Drake Take Care"
+    }
+  },
+  {
+    "id": "slime-you-out-feat-sza",
+    "title": "Slime You Out (feat. SZA)",
+    "artist": "Drake",
+    "album": "For All The Dogs",
+    "duration": 310,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/fa/9e/e6/fa9ee672-0880-2b5b-a69d-981e8fcb807e/23UM1IM09863.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7a/31/4d/7a314d17-abf6-d322-e04c-f04aa9f13a9c/mzaf_8166785415651777298.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Slime You Out Drake SZA",
+      "search": "Slime You Out Drake SZA"
+    }
+  },
+  {
+    "id": "xscape",
+    "title": "XSCAPE",
+    "artist": "Don Toliver",
+    "album": "Life of a DON",
+    "duration": 156,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b1/05/3d/b1053d96-a026-324e-9322-decf3836ac1f/075679766335.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/fc/b6/3b/fcb63b9e-2f18-3253-7c0e-30341980194b/mzaf_1557324327214418975.plus.aac.p.m4a",
+    "_debug": {
+      "query": "XSCAPE Don Toliver Life of a DON",
+      "search": "XSCAPE Don Toliver Life of a DON"
+    }
+  },
+  {
+    "id": "better-now",
+    "title": "Better Now",
+    "artist": "Post Malone",
+    "album": "beerbongs & bentleys",
+    "duration": 231,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/55/9f/fb/559ffb75-3c00-abd6-7b1f-8b6b1518b173/18UMGIM22101.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a1/2a/06/a12a0675-58e5-c404-5f55-64f0b7058f42/mzaf_4757445611632570860.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Better Now Post Malone beerbongs bentleys",
+      "search": "Better Now Post Malone beerbongs bentleys"
+    }
+  },
+  {
+    "id": "adorn",
+    "title": "Adorn",
+    "artist": "Miguel",
+    "album": "Kaleidoscope Dream",
+    "duration": 193,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a1/56/ac/a156acb2-068e-a616-3e56-86ca656c14ce/886443632943.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/66/13/51/661351bf-a3a1-3c96-4c66-04cd3144a19a/mzaf_13243965223855913867.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Adorn Miguel Kaleidoscope Dream",
+      "search": "Adorn Miguel Kaleidoscope Dream"
+    }
+  },
+  {
+    "id": "wake-me-up",
+    "title": "Wake Me Up",
+    "artist": "Avicii",
+    "album": "True",
+    "duration": 250,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/18/5b/1e/185b1ef5-5d97-19d8-aebf-8e29e41874ef/13UAAIM59255.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/68/1e/60/681e601f-e1f2-4ebb-37de-adf00bdf57b6/mzaf_8266263075137964740.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Wake Me Up Avicii True",
+      "search": "Wake Me Up Avicii True"
+    }
+  },
+  {
+    "id": "let-her-go-feat-ed-sheeran-anniversary-edition-acoustic",
+    "title": "Let Her Go (feat. Ed Sheeran) [Anniversary Edition Acoustic]",
+    "artist": "Passenger",
+    "album": "All The Little Lights (Anniversary Edition)",
+    "duration": 256,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/1f/82/52/1f8252d9-d3f1-3deb-2989-58155494ede4/067003148856.png/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/72/cb/f6/72cbf6f1-f42f-83e3-f16b-8c396e5bc40e/mzaf_10236295888113702894.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Let Her Go Acoustic Passenger",
+      "search": "Let Her Go Acoustic Passenger"
+    }
+  },
+  {
+    "id": "sky-walker-feat-travis-scott",
+    "title": "Sky Walker (feat. Travis Scott)",
+    "artist": "Miguel",
+    "album": "War & Leisure",
+    "duration": 259,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/26/56/cd/2656cd50-73a3-998f-2204-9342b805f517/886446846255.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ed/d9/63/edd96313-326d-b9fc-7113-fb28598bb097/mzaf_2685631611705947754.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Sky Walker Miguel Travis Scott",
+      "search": "Sky Walker Miguel Travis Scott"
+    }
+  },
+  {
+    "search": "GOLD BROCKHAMPTON SATURATION",
+    "error": "no-match"
+  },
+  {
+    "id": "nobody-feat-mr-eazi",
+    "title": "Nobody (feat. Mr Eazi)",
+    "artist": "Kwesi Arthur",
+    "album": "Live from Nkrumah Krom, Vol II: Home Run",
+    "duration": 213,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/f7/b5/67/f7b56749-843f-ddaf-c158-9f6e44b6c44b/5060450068604.png/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/47/a2/e5/47a2e579-6621-f7b9-cdbb-79e7d9f74575/mzaf_12855236149414921099.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Devil Knocking Kwesi Arthur Nkrumah Krom",
+      "search": "Devil Knocking Kwesi Arthur Nkrumah Krom"
+    }
+  },
+  {
+    "search": "Yaw Ming La Meme Gang Spacely KwakuBs",
+    "error": "no-match"
+  },
+  {
+    "id": "beautiful",
+    "title": "Beautiful",
+    "artist": "Bazzi",
+    "album": "COSMIC",
+    "duration": 178,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/7c/98/07/7c98072e-e826-d77c-e829-daa87f5706b9/075679874580.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c3/6b/db/c36bdb4b-34da-80fb-9950-1f5b62e53cca/mzaf_12210567977961127566.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Beautiful Bazzi Cosmic",
+      "search": "Beautiful Bazzi Cosmic"
+    }
+  },
+  {
+    "id": "pretty-little-fears-feat-j-cole",
+    "title": "Pretty Little Fears (feat. J. Cole)",
+    "artist": "6LACK",
+    "album": "East Atlanta Love Letter",
+    "duration": 240,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/91/da/16/91da164f-f447-115a-a88f-514927f8416e/18UMGIM53418.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a7/23/56/a72356a3-40a1-68b4-f45d-01eaf3bba082/mzaf_7680742769854719757.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Pretty Little Fears 6LACK J Cole",
+      "search": "Pretty Little Fears 6LACK J Cole"
+    }
+  },
+  {
+    "id": "smile-feat-tibu",
+    "title": "Smile (feat. Tibu)",
+    "artist": "Magnom",
+    "album": "We Speed 3",
+    "duration": 197,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/50/e0/4b/50e04b74-e7cf-8a95-1d0d-681bc493ca77/artwork.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/8b/50/8d/8b508d52-6532-581e-806d-64a0992b5ce8/mzaf_12909746213915574259.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Delay Tibu",
+      "search": "Delay Tibu"
+    }
+  },
+  {
+    "id": "butterfly-effect",
+    "title": "BUTTERFLY EFFECT",
+    "artist": "Travis Scott",
+    "album": "ASTROWORLD",
+    "duration": 191,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/30/66/90/306690d4-2a29-402e-e406-6b319ce7731a/886447227169.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/50/de/cf/50decf79-548e-cb82-d9c3-389b805f3d99/mzaf_12127657751890989044.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Butterfly Effect Travis Scott",
+      "search": "Butterfly Effect Travis Scott"
+    }
+  },
+  {
+    "id": "when-the-party-s-over",
+    "title": "when the party's over",
+    "artist": "Billie Eilish",
+    "album": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
+    "duration": 196,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1a/37/d1/1a37d1b1-8508-54f2-f541-bf4e437dda76/19UMGIM05028.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2a/ba/44/2aba4410-ba71-89ce-e075-10120409c31c/mzaf_16887001963655152332.plus.aac.p.m4a",
+    "_debug": {
+      "query": "when the partys over Billie Eilish",
+      "search": "when the partys over Billie Eilish"
+    }
+  },
+  {
+    "id": "after-hours",
+    "title": "After Hours",
+    "artist": "The Weeknd",
+    "album": "After Hours",
+    "duration": 361,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/6f/bc/e6/6fbce6c4-c38c-72d8-4fd0-66cfff32f679/20UMGIM12176.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/54/2b/61/542b6133-80f7-f30f-4dcf-059490db9d84/mzaf_1539067797902127760.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Faith The Weeknd After Hours",
+      "search": "Faith The Weeknd After Hours"
+    }
+  },
+  {
+    "id": "john-redcorn",
+    "title": "John Redcorn",
+    "artist": "SiR",
+    "album": "Chasing Summer",
+    "duration": 188,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/dc/aa/a8/dcaaa87d-8d60-d431-b203-f285cfa3d26c/886447892336_cover.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/81/73/56/81735676-e90a-f3e6-81a7-793879dca38d/mzaf_12576928093647000312.plus.aac.p.m4a",
+    "_debug": {
+      "query": "John Redcorn SiR Chasing Summer",
+      "search": "John Redcorn SiR Chasing Summer"
+    }
+  },
+  {
+    "id": "barefoot-in-the-park-feat-rosalia",
+    "title": "Barefoot in the Park (feat. ROSALÍA)",
+    "artist": "James Blake",
+    "album": "Assume Form",
+    "duration": 211,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/be/00/41/be00414f-e15d-a689-fe2b-89b156cc66e0/00602577391231.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/8e/86/2c/8e862c7c-2a33-6bf9-3c73-10cd8fac8d07/mzaf_599047564549022718.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Barefoot in the Park James Blake Rosalia",
+      "search": "Barefoot in the Park James Blake Rosalia"
+    }
+  },
+  {
+    "search": "Kemor Ame La Meme Gang",
+    "error": "no-match"
+  },
+  {
+    "id": "six-paths",
+    "title": "Six Paths",
+    "artist": "Dave",
+    "album": "Six Paths - EP",
+    "duration": 223,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c5/9e/30/c59e3000-c357-dc1c-04ff-671312e4f4f7/5055831997574_cover.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ff/e2/89/ffe289c1-d90b-808d-b735-7e19effa760c/mzaf_7561724447167010603.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Six Paths Dave",
+      "search": "Six Paths Dave"
+    }
+  },
+  {
+    "search": "Shade KwakuBs DarkoVibes ABU",
+    "error": "no-match"
+  },
+  {
+    "id": "niagara-falls",
+    "title": "Niagara Falls",
+    "artist": "The Weeknd",
+    "album": "Hurry Up Tomorrow",
+    "duration": 277,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/13/fd/a3/13fda38d-fc63-ddc3-1cf2-c09251adc532/25UMGIM09489.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f9/5d/90/f95d90db-d1e5-d518-e162-ce3e43b3c985/mzaf_13394827744360005478.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Niagara Falls Weeknd Hurry Up Tomorrow",
+      "search": "Niagara Falls Weeknd Hurry Up Tomorrow"
+    }
+  },
+  {
+    "id": "homecoming-feat-chris-martin",
+    "title": "Homecoming (feat. Chris Martin)",
+    "artist": "Kanye West",
+    "album": "Graduation",
+    "duration": 204,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/39/25/2d/39252d65-2d50-b991-0962-f7a98a761271/00602517483507.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a0/b6/ac/a0b6ac24-9509-19e7-85a7-0be507d17c02/mzaf_5643812388289006313.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Homecoming Kanye West Chris Martin Graduation",
+      "search": "Homecoming Kanye West Chris Martin Graduation"
+    }
+  },
+  {
+    "id": "good-morning",
+    "title": "Good Morning",
+    "artist": "Kanye West",
+    "album": "Graduation",
+    "duration": 195,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/39/25/2d/39252d65-2d50-b991-0962-f7a98a761271/00602517483507.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/cb/09/59/cb0959cd-fcc5-66a3-c293-ed58a7ad9c43/mzaf_7396332483720740039.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Good Morning Kanye West Graduation",
+      "search": "Good Morning Kanye West Graduation"
+    }
+  },
+  {
+    "id": "runaway-feat-pusha-t",
+    "title": "Runaway (feat. Pusha T)",
+    "artist": "Kanye West & Pusha T",
+    "album": "My Beautiful Dark Twisted Fantasy (Deluxe Edition)",
+    "duration": 548,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/37/da/7c/37da7cc5-2b6f-9bb8-30ba-8a8c3be3e16a/00602527584973.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/40/eb/e4/40ebe4ff-4fc7-bf69-3ce1-2cf8da97fc94/mzaf_98592928812732269.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Runaway Kanye West Pusha T MBDTF",
+      "search": "Runaway Kanye West Pusha T MBDTF"
+    }
+  },
+  {
+    "id": "monster-feat-jay-z-rick-ross-nicki-minaj-bon-iver",
+    "title": "Monster (feat. JAŸ-Z, Rick Ross, Nicki Minaj & Bon Iver)",
+    "artist": "Kanye West, JAŸ-Z, Rick Ross, Nicki Minaj & Bon Iver",
+    "album": "My Beautiful Dark Twisted Fantasy (Deluxe Edition)",
+    "duration": 379,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/37/da/7c/37da7cc5-2b6f-9bb8-30ba-8a8c3be3e16a/00602527584973.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/40/92/fc/4092fce7-d6be-69e2-4e16-a1fd64426c88/mzaf_8948386197541827675.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Monster Kanye West Jay Z Nicki Minaj",
+      "search": "Monster Kanye West Jay Z Nicki Minaj"
+    }
+  },
+  {
+    "id": "slow-dancing-in-the-dark",
+    "title": "SLOW DANCING IN THE DARK",
+    "artist": "Joji",
+    "album": "BALLADS 1",
+    "duration": 209,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/7b/63/fd/7b63fdf0-31a7-ed7c-0449-ca3df4aec9dc/190296925382.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/cd/d2/1b/cdd21b71-a732-c5f7-3369-5b05ebdd8522/mzaf_9663238902315843917.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Slow Dancing in the Dark Joji Ballads 1",
+      "search": "Slow Dancing in the Dark Joji Ballads 1"
+    }
+  },
+  {
+    "id": "hand-of-god-outro",
+    "title": "Hand of God (Outro)",
+    "artist": "Jon Bellion",
+    "album": "The Human Condition",
+    "duration": 338,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/ad/44/ea/ad44ea8b-af34-6628-8a86-65fa33c3ff82/16UMGIM28172.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4b/59/19/4b591966-a0fe-02bb-b2f2-59ad93757aef/mzaf_11074847438872180573.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Hand of God Outro Jon Bellion Human Condition",
+      "search": "Hand of God Outro Jon Bellion Human Condition"
+    }
+  },
+  {
+    "id": "money-trees-feat-jay-rock",
+    "title": "Money Trees (feat. Jay Rock)",
+    "artist": "Kendrick Lamar",
+    "album": "good kid, m.A.A.d city (Deluxe Version)",
+    "duration": 387,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/36/86/ec/3686ec99-dec4-0a01-8b74-2d8a9a0263a7/12UMGIM52988.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/be/7f/2f/be7f2fe2-41dd-6b9a-4957-a10ac5c62989/mzaf_17460900856492630846.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Money Trees Kendrick Lamar Jay Rock",
+      "search": "Money Trees Kendrick Lamar Jay Rock"
+    }
+  },
+  {
+    "id": "remember",
+    "title": "Remember",
+    "artist": "Asake",
+    "album": "Work Of Art",
+    "duration": 182,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/cc/23/83/cc2383d9-eecc-f974-5f5b-d445c583acdb/197342233958_cover.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ae/d1/f5/aed1f575-1624-1414-b4b0-666e4eb1e4cf/mzaf_16514113868838400487.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Remember Asake Work of Art",
+      "search": "Remember Asake Work of Art"
+    }
+  },
+  {
+    "id": "self-control",
+    "title": "Self Control",
+    "artist": "Frank Ocean",
+    "album": "Blonde",
+    "duration": 250,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/bb/45/68/bb4568f3-68cd-619d-fbcb-4e179916545d/BlondCover-Final.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ba/cc/4d/bacc4dda-b762-0c0a-5ef0-6c2fad1bdb5c/mzaf_8909701195572310967.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Self Control Frank Ocean Blonde",
+      "search": "Self Control Frank Ocean Blonde"
+    }
+  },
+  {
+    "id": "the-less-i-know-the-better",
+    "title": "The Less I Know The Better",
+    "artist": "Mau P",
+    "album": "The Less I Know The Better - Single",
+    "duration": 176,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a0/9a/2c/a09a2ca3-a5a6-814b-0af7-640dc0aef0aa/091012682261.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8b/55/f3/8b55f3a3-3204-8930-f156-82843546950e/mzaf_9370328603131228430.plus.aac.p.m4a",
+    "_debug": {
+      "query": "The Less I Know the Better Tame Impala Currents",
+      "search": "The Less I Know the Better Tame Impala Currents"
+    }
+  },
+  {
+    "id": "un-verano-sin-ti",
+    "title": "Un Verano Sin Ti",
+    "artist": "Bad Bunny",
+    "album": "Un Verano Sin Ti",
+    "duration": 148,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/3e/04/eb/3e04ebf6-370f-f59d-ec84-2c2643db92f1/196626945068.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/29/21/aa/2921aa77-0a9b-4771-a6e9-2db85f177444/mzaf_11940520242658716528.plus.aac.p.m4a",
+    "_debug": {
+      "query": "Titi Me Pregunto Bad Bunny Un Verano Sin Ti",
+      "search": "Titi Me Pregunto Bad Bunny Un Verano Sin Ti"
+    }
+  },
+  {
+    "id": "malamente-cap-1-augurio",
+    "title": "MALAMENTE (Cap.1: Augurio)",
+    "artist": "ROSALÍA",
+    "album": "EL MAL QUERER",
+    "duration": 150,
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/2c/55/e1/2c55e13f-15d8-1c7c-1826-c5fa55deaa8f/886447217139.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/46/56/69/46566970-f20e-553c-6db4-ce4934b49aa6/mzaf_16288982831865165666.plus.aac.p.m4a",
+    "_debug": {
+      "query": "MALAMENTE Rosalia El Mal Querer",
+      "search": "MALAMENTE Rosalia El Mal Querer"
+    }
+  },
+  {
+    "search": "Whats Going On Marvin Gaye",
+    "error": "no-match"
+  },
+  {
+    "search": "Drive Black Coffee Pieces of Me David Guetta",
+    "error": "no-match"
+  }
+]

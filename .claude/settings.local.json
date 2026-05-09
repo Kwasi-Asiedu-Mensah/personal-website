@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/kwasi.asiedu-mensah/Documents/Claude/**)",
+      "WebFetch(domain:alanagoyal.com)",
+      "Bash(gh api *)",
+      "Bash(gh repo *)",
+      "WebSearch",
+      "Bash(curl -s \"https://raw.githubusercontent.com/alanagoyal/alanagoyal/main/lib/notes-data.ts\")",
+      "Bash(xargs cat *)"
+    ]
+  }
+}
