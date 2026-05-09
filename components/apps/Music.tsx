@@ -332,7 +332,7 @@ function MainView({
   onSelect: (id: ViewId) => void;
 }) {
   if (view === "home") return <HomeView onSelect={onSelect} />;
-  if (view === "browse") return <BrowseView />;
+  if (view === "browse") return <BrowseView onSelect={onSelect} />;
   if (view === "artists") return <ArtistsView />;
   if (view === "albums") return <AlbumsView />;
   if (view === "songs") return <SongsView />;
@@ -380,35 +380,33 @@ function HomeView({ onSelect }: { onSelect: (id: ViewId) => void }) {
 
 /* ============================== Browse ============================== */
 
-function BrowseView() {
+function BrowseView({ onSelect }: { onSelect: (id: ViewId) => void }) {
   return (
     <div className="px-8 py-7">
-      <SectionTitle>browse</SectionTitle>
-      <p
-        className="text-[13px] max-w-[480px]"
-        style={{ color: "var(--window-text-muted)" }}
-      >
-        nothing to browse yet — drop more songs into{" "}
-        <code
-          style={{
-            background: "var(--searchbar-bg)",
-            padding: "1px 6px",
-            borderRadius: 4,
-            fontFamily:
-              '"SF Mono", Menlo, ui-monospace, monospace',
-            fontSize: 12,
-          }}
-        >
-          /public/music/
-        </code>{" "}
-        or add iTunes preview URLs in <code style={{
-          background: "var(--searchbar-bg)",
-          padding: "1px 6px",
-          borderRadius: 4,
-          fontFamily: '"SF Mono", Menlo, ui-monospace, monospace',
-          fontSize: 12,
-        }}>lib/music-data.ts</code> and they&rsquo;ll show up here.
-      </p>
+      <SectionTitle>playlists</SectionTitle>
+      <div className="grid grid-cols-2 gap-3">
+        {PLAYLISTS.map((p) => {
+          const tracks = getPlaylistTracks(p);
+          return (
+            <button
+              key={p.id}
+              onClick={() => onSelect(`playlist:${p.id}`)}
+              className="relative h-[100px] rounded-xl overflow-hidden text-left flex flex-col justify-end p-4 shadow-sm"
+              style={{ background: playlistGradient(p.id) }}
+            >
+              <span className="absolute top-3 right-4 text-[32px] leading-none opacity-80">
+                {p.emoji}
+              </span>
+              <span className="text-[14px] font-semibold text-white leading-tight">
+                {p.name}
+              </span>
+              <span className="text-[11px] text-white/60 mt-0.5">
+                {tracks.length} song{tracks.length === 1 ? "" : "s"}
+              </span>
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 }
