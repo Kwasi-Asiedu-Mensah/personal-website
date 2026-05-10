@@ -133,44 +133,23 @@ const StatusButton = forwardRef<HTMLButtonElement, StatusButtonProps>(
 /* =============================== Icons =============================== */
 
 function BatteryIcon() {
-  const { battery } = useSystemState();
-  // Visual fill width within inner area (12px wide).
+  const { battery, lowPower } = useSystemState();
   const fillWidth = Math.max(2, Math.round((battery / 100) * 12));
+  const fillColor = lowPower ? "#f0a30a" : "currentColor";
   return (
-    <svg
-      viewBox="0 0 22 11"
-      width="22"
-      height="11"
-      fill="none"
-      aria-hidden
-    >
+    <svg viewBox="0 0 22 11" width="22" height="11" fill="none" aria-hidden>
       <rect
         x="0.5"
         y="1"
         width="17"
         height="9"
         rx="2"
-        stroke="currentColor"
+        stroke={lowPower ? "#f0a30a" : "currentColor"}
         strokeWidth="1"
         opacity="0.65"
       />
-      <rect
-        x="2"
-        y="2.5"
-        width={fillWidth}
-        height="6"
-        rx="0.8"
-        fill="currentColor"
-      />
-      <rect
-        x="18.5"
-        y="3.5"
-        width="1.6"
-        height="4"
-        rx="0.4"
-        fill="currentColor"
-        opacity="0.7"
-      />
+      <rect x="2" y="2.5" width={fillWidth} height="6" rx="0.8" fill={fillColor} />
+      <rect x="18.5" y="3.5" width="1.6" height="4" rx="0.4" fill={fillColor} opacity="0.7" />
     </svg>
   );
 }
@@ -505,7 +484,7 @@ function BatteryPopover({
   position: { right: number; top: number };
   onClose: () => void;
 }) {
-  const { battery } = useSystemState();
+  const { battery, lowPower, setLowPower } = useSystemState();
   return (
     <PopoverShell position={position} onClose={onClose} width={300}>
       <div className="px-4 pt-3 pb-3">
@@ -522,16 +501,29 @@ function BatteryPopover({
         <div className="text-[11px] uppercase tracking-wide text-white/45 mb-2">
           Energy Mode
         </div>
-        <button className="w-full flex items-center gap-3 px-2.5 py-2 rounded-md hover:bg-white/[0.06]">
+        <button
+          onClick={() => setLowPower(!lowPower)}
+          className="w-full flex items-center gap-3 px-2.5 py-2 rounded-md hover:bg-white/[0.06] transition-colors"
+        >
           <span
             className="w-7 h-7 rounded-md flex items-center justify-center"
-            style={{ background: "rgba(255,255,255,0.08)" }}
+            style={{ background: lowPower ? "rgba(240,163,10,0.2)" : "rgba(255,255,255,0.08)" }}
           >
             <BatteryIcon />
           </span>
           <span className="text-[13px] flex-1 text-left">Low Power</span>
-          <span className="text-white/55">
-            <ChevronRight />
+          <span
+            className="w-4 h-4 rounded-full border flex items-center justify-center transition-colors"
+            style={{
+              background: lowPower ? "#f0a30a" : "transparent",
+              borderColor: lowPower ? "#f0a30a" : "rgba(255,255,255,0.3)",
+            }}
+          >
+            {lowPower && (
+              <svg viewBox="0 0 10 10" width="8" height="8" fill="none">
+                <path d="M2 5l2.5 2.5L8 3" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            )}
           </span>
         </button>
       </div>

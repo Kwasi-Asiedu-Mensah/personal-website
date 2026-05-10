@@ -19,6 +19,8 @@ type SystemStateContextValue = {
   setAirdropMode: (v: AirDropMode) => void;
   focusOn: boolean;
   setFocusOn: (v: boolean) => void;
+  lowPower: boolean;
+  setLowPower: (v: boolean) => void;
   brightness: number; // 0-100
   setBrightness: (v: number) => void;
   volume: number; // 0-100
@@ -36,6 +38,7 @@ const DEFAULTS = {
   bluetoothOn: true,
   airdropMode: "contacts" as AirDropMode,
   focusOn: false,
+  lowPower: false,
   brightness: 85,
   volume: 50,
 };
@@ -46,6 +49,8 @@ const SystemStateContext = createContext<SystemStateContextValue>({
   setBluetoothOn: () => {},
   setAirdropMode: () => {},
   setFocusOn: () => {},
+  lowPower: false,
+  setLowPower: () => {},
   setBrightness: () => {},
   setVolume: () => {},
   battery: 97,
@@ -60,6 +65,7 @@ export function SystemStateProvider({ children }: { children: ReactNode }) {
     DEFAULTS.airdropMode
   );
   const [focusOn, setFocusOn] = useState(DEFAULTS.focusOn);
+  const [lowPower, setLowPower] = useState(DEFAULTS.lowPower);
   const [brightness, setBrightness] = useState(DEFAULTS.brightness);
   const [volume, setVolume] = useState(DEFAULTS.volume);
   const [hydrated, setHydrated] = useState(false);
@@ -79,6 +85,7 @@ export function SystemStateProvider({ children }: { children: ReactNode }) {
         )
           setAirdropMode(p.airdropMode);
         if (typeof p.focusOn === "boolean") setFocusOn(p.focusOn);
+        if (typeof p.lowPower === "boolean") setLowPower(p.lowPower);
         if (typeof p.brightness === "number") setBrightness(p.brightness);
         if (typeof p.volume === "number") setVolume(p.volume);
       }
@@ -99,6 +106,7 @@ export function SystemStateProvider({ children }: { children: ReactNode }) {
           bluetoothOn,
           airdropMode,
           focusOn,
+          lowPower,
           brightness,
           volume,
         })
@@ -106,7 +114,7 @@ export function SystemStateProvider({ children }: { children: ReactNode }) {
     } catch {
       // ignore
     }
-  }, [wifiOn, bluetoothOn, airdropMode, focusOn, brightness, volume, hydrated]);
+  }, [wifiOn, bluetoothOn, airdropMode, focusOn, lowPower, brightness, volume, hydrated]);
 
   return (
     <SystemStateContext.Provider
@@ -119,6 +127,8 @@ export function SystemStateProvider({ children }: { children: ReactNode }) {
         setAirdropMode,
         focusOn,
         setFocusOn,
+        lowPower,
+        setLowPower,
         brightness,
         setBrightness,
         volume,
