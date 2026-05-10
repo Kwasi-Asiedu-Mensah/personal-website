@@ -149,7 +149,7 @@ export const notes: Note[] = [
       {
         type: "list",
         items: [
-          "chess — [challenge me to a 3-day game](https://link.chess.com/play/2zSflI)",
+          "chess — [find me on chess.com](https://www.chess.com/member/coolshugz)",
         ],
       },
       { type: "heading", text: "daily games" },
