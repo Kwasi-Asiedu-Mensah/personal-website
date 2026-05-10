@@ -1112,7 +1112,7 @@ export const notes: Note[] = [
           "laziness (in all forms, physical and mental)",
         ],
       },
-      { type: "heading", text: "designers" },
+      { type: "heading", text: "fashiondesigners" },
       {
         type: "list",
         items: [
