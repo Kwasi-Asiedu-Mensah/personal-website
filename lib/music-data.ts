@@ -653,6 +653,40 @@ export const TRACKS: Track[] = [
       "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ae/d1/f5/aed1f575-1624-1414-b4b0-666e4eb1e4cf/mzaf_16514113868838400487.plus.aac.p.m4a",
   },
 
+  {
+    id: "adventure-of-a-lifetime",
+    title: "Adventure of a Lifetime",
+    artist: "Coldplay",
+    album: "A Head Full of Dreams",
+    duration: 264,
+    albumArt:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c8/0a/6d/c80a6df9-e55a-fb83-0311-f4776984ac67/mzm.lasidxkv.jpg/600x600bb.jpg",
+    previewUrl:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/b9/78/7b/b9787b6d-2bcc-6fd7-231f-9e79b91d988e/mzaf_13866407877410073156.plus.aac.p.m4a",
+  },
+  {
+    id: "i-want-you-back",
+    title: "I Want You Back",
+    artist: "Jackson 5",
+    album: "Diana Ross Presents the Jackson 5",
+    duration: 181,
+    albumArt:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/dc/5d/6d/dc5d6d8e-61dc-401b-80a6-c2a745fe048a/08UMGIM28826.rgb.jpg/600x600bb.jpg",
+    previewUrl:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/51/c5/27/51c527f5-c9fd-8fc7-175b-53c365c13664/mzaf_7763659600534750503.plus.aac.p.m4a",
+  },
+  {
+    id: "billie-jean",
+    title: "Billie Jean",
+    artist: "Michael Jackson",
+    album: "Thriller",
+    duration: 294,
+    albumArt:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/600x600bb.jpg",
+    previewUrl:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/dc/bc/8a/dcbc8a3e-4ce1-c00d-cc02-eda2212053c7/mzaf_8347559338388601510.plus.aac.p.m4a",
+  },
+
   // ───────── diversifiers (broader palette) ─────────
   {
     id: "self-control",
@@ -767,6 +801,9 @@ export const PLAYLISTS: Playlist[] = [
       "self-control",
       "un-verano-sin-ti",
       "malamente",
+      "adventure-of-a-lifetime",
+      "i-want-you-back",
+      "billie-jean",
     ],
   },
   {
