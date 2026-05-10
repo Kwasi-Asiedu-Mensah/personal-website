@@ -1009,7 +1009,7 @@ export const notes: Note[] = [
           "flying",
           "love",
           "driving a car",
-          "love",
+          "phone",
           "paycheck",
         ],
       },
