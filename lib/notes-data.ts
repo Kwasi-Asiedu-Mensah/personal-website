@@ -27,7 +27,7 @@ export const notes: Note[] = [
     emoji: "📌",
     title: "about me",
     daysAgo: 0,
-    preview: "devops engineer · building omni and centient",
+    preview: "devops engineer · building eden and centient",
     pinned: true,
     blocks: [
       { type: "paragraph", text: "i'm kwasi (pronounced qu-ah-see). i'm so cool, what can't i do?" },
@@ -35,7 +35,7 @@ export const notes: Note[] = [
       {
         type: "list",
         items: [
-          "building [omni](https://omnilabsghana.tech/) — africa's customer service and commerce layer",
+          "building eden — africa's customer service and commerce layer",
           "building centient — for renewable energy",
           "devops engineer at [inpath technologies](https://www.inpathgroup.africa/)",
           "based in accra",
@@ -643,13 +643,14 @@ export const notes: Note[] = [
         items: [
           "Nippon Sangoku S1",
           "The Boys S5",
-          "Daredevil: Born Again S2",
+          "Devil May Cry S2",
         ],
       },
       { type: "heading", text: "2026" },
       {
         type: "list",
         items: [
+          "Daredevil: Born Again S2",
           "Peaky Blinders: The Immortal Man (2026)",
           "The Legend of Aang: The Last Airbender (2026)",
           "Mike and Nick and Nick and Alice (2026)",
