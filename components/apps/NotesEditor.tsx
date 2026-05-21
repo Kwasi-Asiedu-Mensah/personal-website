@@ -43,6 +43,11 @@ function OwnerView({
     );
 
   const [expanded, setExpanded] = useState<Set<string>>(() => new Set());
+  const scrollRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    scrollRef.current?.scrollTo(0, 0);
+  }, [note.id]);
 
   const toggleHeading = (text: string) => {
     if (isAlwaysExpanded(text)) return;
@@ -79,6 +84,7 @@ function OwnerView({
 
   return (
     <section
+      ref={scrollRef}
       className="flex-1 min-w-0 h-full overflow-y-auto"
       style={{ background: "var(--window-bg)" }}
     >
@@ -321,7 +327,12 @@ function UserEditor({
 }) {
   const { updateUserNote } = useNotesStore();
   const titleRef = useRef<HTMLInputElement>(null);
+  const scrollRef = useRef<HTMLElement>(null);
   const longDate = formatLongDate(new Date(note.createdAt));
+
+  useEffect(() => {
+    scrollRef.current?.scrollTo(0, 0);
+  }, [note.id]);
 
   // Auto-focus the title for fresh empty notes
   useEffect(() => {
@@ -333,6 +344,7 @@ function UserEditor({
 
   return (
     <section
+      ref={scrollRef}
       className="flex-1 min-w-0 h-full overflow-y-auto"
       style={{ background: "var(--window-bg)" }}
     >
