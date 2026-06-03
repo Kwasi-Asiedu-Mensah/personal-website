@@ -59,6 +59,7 @@ export const TRACKS: Track[] = [
     title: "Shabang",
     artist: "Drake",
     album: "ICEMAN",
+    duration: 188,
     albumArt:
       "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7f/39/61/7f396123-be56-bc11-eaab-976441808e58/26UMGIM63622.rgb.jpg/600x600bb.jpg",
     previewUrl:
@@ -69,6 +70,7 @@ export const TRACKS: Track[] = [
     title: "Janice STFU",
     artist: "Drake",
     album: "ICEMAN",
+    duration: 237,
     albumArt:
       "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7f/39/61/7f396123-be56-bc11-eaab-976441808e58/26UMGIM63622.rgb.jpg/600x600bb.jpg",
     previewUrl:
@@ -79,6 +81,7 @@ export const TRACKS: Track[] = [
     title: "B's On The Table",
     artist: "Drake & 21 Savage",
     album: "ICEMAN",
+    duration: 137,
     albumArt:
       "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7f/39/61/7f396123-be56-bc11-eaab-976441808e58/26UMGIM63622.rgb.jpg/600x600bb.jpg",
     previewUrl:
