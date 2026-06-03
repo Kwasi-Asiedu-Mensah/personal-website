@@ -35,7 +35,7 @@ export const notes: Note[] = [
       {
         type: "list",
         items: [
-          "building eden — africa's customer service and commerce layer",
+          "building [eden](https://tryeden.africa) — africa's customer service and commerce layer",
           "building centient — for renewable energy",
           "devops engineer at [inpath technologies](https://www.inpathgroup.africa/)",
           "based in accra",
@@ -487,6 +487,9 @@ export const notes: Note[] = [
       {
         type: "list",
         items: [
+          "shabang — drake",
+          "janice stfu — drake",
+          "b's on the table — drake",
           "[zion](music:zion) — arathejay",
           "[ara no dey sleep](music:ara-no-dey-sleep) — arathejay",
           "[popstar](music:popstar) — black sherif",
@@ -1361,6 +1364,7 @@ export const notes: Note[] = [
       {
         type: "list",
         items: [
+          "[the magic of writing](https://coolshugz.substack.com/p/the-magic-of-writing) — jun 2026",
           "[context windows](https://coolshugz.substack.com/p/context-windows) — how to manage your attention and get what you want — apr 2026",
           "[ouroboros](https://coolshugz.substack.com/p/ouroboros) — how we can snap out of patterns we are trapped in or do not even know about — mar 2026",
           "[onryō](https://coolshugz.substack.com/p/onryo) — reminder that you're exactly where you need to be — jan 2026",
