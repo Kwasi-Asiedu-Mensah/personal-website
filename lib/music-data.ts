@@ -55,6 +55,36 @@ export const TRACKS: Track[] = [
   // ───────── on-repeat keepers (heavy rotation, also referenced by the
   // on-repeat note) ─────────
   {
+    id: "shabang",
+    title: "Shabang",
+    artist: "Drake",
+    album: "ICEMAN",
+    albumArt:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7f/39/61/7f396123-be56-bc11-eaab-976441808e58/26UMGIM63622.rgb.jpg/600x600bb.jpg",
+    previewUrl:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f5/5e/57/f55e579b-4598-e298-f585-03dfd3b9951c/mzaf_17667839459904209421.plus.aac.p.m4a",
+  },
+  {
+    id: "janice-stfu",
+    title: "Janice STFU",
+    artist: "Drake",
+    album: "ICEMAN",
+    albumArt:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7f/39/61/7f396123-be56-bc11-eaab-976441808e58/26UMGIM63622.rgb.jpg/600x600bb.jpg",
+    previewUrl:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c6/d7/d1/c6d7d1ec-84e6-ef8a-e02a-70d0ebb556be/mzaf_12941739828801829931.plus.aac.p.m4a",
+  },
+  {
+    id: "bs-on-the-table",
+    title: "B's On The Table",
+    artist: "Drake & 21 Savage",
+    album: "ICEMAN",
+    albumArt:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7f/39/61/7f396123-be56-bc11-eaab-976441808e58/26UMGIM63622.rgb.jpg/600x600bb.jpg",
+    previewUrl:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e7/cb/74/e7cb749b-2b9c-3b27-b45a-8e5da2493a49/mzaf_15494222518134088783.plus.aac.p.m4a",
+  },
+  {
     id: "popstar",
     title: "PopStar",
     artist: "Black Sherif",
@@ -735,6 +765,9 @@ export const PLAYLISTS: Playlist[] = [
     // via [label](music:<trackId>), so update both sides if you change
     // the ids here.
     trackIds: [
+      "shabang",
+      "janice-stfu",
+      "bs-on-the-table",
       "zion",
       "ara-no-dey-sleep",
       "popstar",

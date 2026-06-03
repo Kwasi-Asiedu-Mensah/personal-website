@@ -487,9 +487,9 @@ export const notes: Note[] = [
       {
         type: "list",
         items: [
-          "shabang — drake",
-          "janice stfu — drake",
-          "b's on the table — drake",
+          "[shabang](music:shabang) — drake",
+          "[janice stfu](music:janice-stfu) — drake",
+          "[b's on the table](music:bs-on-the-table) — drake & 21 savage",
           "[zion](music:zion) — arathejay",
           "[ara no dey sleep](music:ara-no-dey-sleep) — arathejay",
           "[popstar](music:popstar) — black sherif",
@@ -1364,7 +1364,7 @@ export const notes: Note[] = [
       {
         type: "list",
         items: [
-          "[the magic of writing](https://coolshugz.substack.com/p/the-magic-of-writing) — jun 2026",
+          "[the magic of writing](https://coolshugz.substack.com/p/the-magic-of-writing) — the most ancient magic is the one you're sleeping on. your words change the world — jun 2026",
           "[context windows](https://coolshugz.substack.com/p/context-windows) — how to manage your attention and get what you want — apr 2026",
           "[ouroboros](https://coolshugz.substack.com/p/ouroboros) — how we can snap out of patterns we are trapped in or do not even know about — mar 2026",
           "[onryō](https://coolshugz.substack.com/p/onryo) — reminder that you're exactly where you need to be — jan 2026",
