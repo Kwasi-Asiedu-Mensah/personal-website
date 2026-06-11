@@ -507,6 +507,8 @@ export const notes: Note[] = [
           "[ace trumpets](music:ace-trumpets) — clipse",
           "[f.i.c.o.](music:f-i-c-o) — clipse, stove god cooks",
           "[so far ahead](music:so-far-ahead) — clipse, pharrell",
+          "[wa](music:wa) — asake",
+          "[mcbh](music:mcbh) — asake",
         ],
       },
       { type: "heading", text: "all-time" },

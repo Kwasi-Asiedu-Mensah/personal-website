@@ -110,6 +110,28 @@ export const TRACKS: Track[] = [
       "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/05/52/9f0552e5-8d75-cb72-f6bd-098ef8441cf2/mzaf_214968037439787785.plus.aac.p.m4a",
   },
   {
+    id: "wa",
+    title: "Wa",
+    artist: "Asake",
+    album: "M$NEY",
+    duration: 144,
+    albumArt:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/31/e4/eb/31e4ebf4-97bd-c193-59c7-1b72ed7ab53a/ticket.wlorjbae.jpg/600x600bb.jpg",
+    previewUrl:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/dd/dc/23/dddc2311-e684-21cf-d0cd-b195b7c2a4ce/mzaf_11276968404313552484.plus.aac.p.m4a",
+  },
+  {
+    id: "mcbh",
+    title: "MCBH",
+    artist: "Asake",
+    album: "M$NEY",
+    duration: 171,
+    albumArt:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/31/e4/eb/31e4ebf4-97bd-c193-59c7-1b72ed7ab53a/ticket.wlorjbae.jpg/600x600bb.jpg",
+    previewUrl:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bd/df/1b/bddf1b1b-5594-c149-6593-9bba2d072139/mzaf_17070653293854010703.plus.aac.p.m4a",
+  },
+  {
     id: "iplan-feat-zaba-sykes",
     title: "iPlan (feat. Zaba & Sykes)",
     artist: "Dlala Thukzin",
@@ -788,6 +810,8 @@ export const PLAYLISTS: Playlist[] = [
       "ace-trumpets",
       "f-i-c-o",
       "so-far-ahead",
+      "wa",
+      "mcbh",
     ],
   },
   {
