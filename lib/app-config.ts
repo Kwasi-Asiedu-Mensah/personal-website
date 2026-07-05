@@ -18,6 +18,8 @@ import {
   PreviewIcon,
   MusicIcon,
   WeatherIcon,
+  MessagesIcon,
+  PhotosIcon,
 } from "@/components/icons/DockIcons";
 
 /* =============================== Types =============================== */
@@ -30,7 +32,9 @@ export type WindowId =
   | "settings"
   | "preview"
   | "music"
-  | "weather";
+  | "weather"
+  | "messages"
+  | "photos";
 
 export type DefaultWindow = {
   x: number;
@@ -132,6 +136,24 @@ export const APPS: Record<WindowId, AppConfig> = {
     showInApplications: true,
     accentColor: "#0A7CFF",
   },
+  messages: {
+    id: "messages",
+    label: "Messages",
+    Icon: MessagesIcon,
+    defaultWindow: { x: 260, y: 120, width: 760, height: 540 },
+    showOnDock: true,
+    showInApplications: true,
+    accentColor: "#34C759",
+  },
+  photos: {
+    id: "photos",
+    label: "Photos",
+    Icon: PhotosIcon,
+    defaultWindow: { x: 180, y: 100, width: 940, height: 600 },
+    showOnDock: true,
+    showInApplications: true,
+    accentColor: "#FF375F",
+  },
 };
 
 /**
@@ -145,6 +167,8 @@ export const DOCK_LAYOUT: DockEntry[] = [
   "finder",
   "notes",
   "music",
+  "messages",
+  "photos",
   "weather",
   "terminal",
   "settings",
@@ -163,6 +187,8 @@ export const WINDOW_RENDER_ORDER: WindowId[] = [
   "terminal",
   "preview",
   "weather",
+  "messages",
+  "photos",
   "music",
   "notes",
 ];
@@ -203,4 +229,6 @@ export const WINDOW_ID_ORDER: WindowId[] = [
   "preview",
   "music",
   "weather",
+  "messages",
+  "photos",
 ];

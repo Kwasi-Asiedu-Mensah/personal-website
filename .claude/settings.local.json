@@ -7,7 +7,8 @@
       "Bash(gh repo *)",
       "WebSearch",
       "Bash(curl -s \"https://raw.githubusercontent.com/alanagoyal/alanagoyal/main/lib/notes-data.ts\")",
-      "Bash(xargs cat *)"
+      "Bash(xargs cat *)",
+      "WebFetch(domain:itunes.apple.com)"
     ]
   }
 }

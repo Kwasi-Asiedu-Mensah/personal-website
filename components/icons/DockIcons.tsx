@@ -391,3 +391,82 @@ export function WeatherIcon() {
     <IconWithFallback name="weather" alt="Weather" fallback={<WeatherSVG />} />
   );
 }
+
+/* ------------------------------- Messages ------------------------------- */
+
+function MessagesSVG() {
+  return (
+    <svg
+      viewBox="0 0 64 64"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-full h-full"
+    >
+      <defs>
+        <linearGradient id="messages-bg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#6BE07A" />
+          <stop offset="100%" stopColor="#27B43E" />
+        </linearGradient>
+      </defs>
+      <rect width="64" height="64" rx="13" fill="url(#messages-bg)" />
+      {/* speech bubble */}
+      <path
+        d="M 32 14 C 20.4 14 11 21.8 11 31.4 C 11 36.9 14.1 41.8 19 45 C 18.6 47.5 17.3 50 15.4 51.9 C 18.9 51.6 22.2 50.3 24.7 48.3 C 27 49 29.4 49.4 32 49.4 C 43.6 49.4 53 41.1 53 31.4 C 53 21.8 43.6 14 32 14 Z"
+        fill="#FFFFFF"
+      />
+    </svg>
+  );
+}
+
+export function MessagesIcon() {
+  return (
+    <IconWithFallback
+      name="messages"
+      alt="Messages"
+      fallback={<MessagesSVG />}
+    />
+  );
+}
+
+/* -------------------------------- Photos -------------------------------- */
+
+function PhotosSVG() {
+  const petals = [
+    { color: "#F5C400", rot: 0 },
+    { color: "#F0A03C", rot: 45 },
+    { color: "#E9573F", rot: 90 },
+    { color: "#D23A6C", rot: 135 },
+    { color: "#8F4FBF", rot: 180 },
+    { color: "#3B77D8", rot: 225 },
+    { color: "#33A8DA", rot: 270 },
+    { color: "#59BC5B", rot: 315 },
+  ];
+  return (
+    <svg
+      viewBox="0 0 64 64"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-full h-full"
+    >
+      <rect width="64" height="64" rx="13" fill="#FFFFFF" />
+      <g transform="translate(32 32)">
+        {petals.map((p) => (
+          <ellipse
+            key={p.rot}
+            cx="0"
+            cy="-12"
+            rx="6"
+            ry="12"
+            fill={p.color}
+            opacity="0.85"
+            transform={`rotate(${p.rot})`}
+          />
+        ))}
+      </g>
+    </svg>
+  );
+}
+
+export function PhotosIcon() {
+  return (
+    <IconWithFallback name="photos" alt="Photos" fallback={<PhotosSVG />} />
+  );
+}

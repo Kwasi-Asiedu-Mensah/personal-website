@@ -17,6 +17,8 @@ import Finder from "./apps/Finder";
 import Preview from "./apps/Preview";
 import Music from "./apps/Music";
 import Weather from "./apps/Weather";
+import Messages from "./apps/Messages";
+import Photos from "./apps/Photos";
 import ScreenOverlay from "./ScreenOverlay";
 import Spotlight from "./Spotlight";
 import { useFilePreview } from "@/lib/file-preview";
@@ -207,6 +209,8 @@ export default function Desktop() {
               {id === "preview" && <Preview />}
               {id === "music" && <Music />}
               {id === "weather" && <Weather />}
+              {id === "messages" && <Messages />}
+              {id === "photos" && <Photos />}
             </Window>
           );
         })}

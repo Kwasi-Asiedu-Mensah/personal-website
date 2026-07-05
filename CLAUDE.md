@@ -55,8 +55,9 @@ Components fire navigation requests (e.g., clicking a song in Notes opens Music 
 | Terminal | `components/apps/Terminal.tsx` | Full (simulated filesystem) |
 | Preview | `components/apps/Preview.tsx` | Full (images, PDFs, text, JSON) |
 | Music | `components/apps/Music.tsx` | Full (playlists, albums, artists, playback) |
-| Messages | `components/apps/Messages.tsx` | **Stub — returns null** |
-| Photos | `components/apps/Photos.tsx` | **Stub — returns null** |
+| Messages | `components/apps/Messages.tsx` | Full (local guestbook w/ scripted auto-replies, site-tips thread) |
+| Photos | `components/apps/Photos.tsx` | Full (grid, lightbox, favorites; auto-discovers /public/photos/photo-N.jpg) |
+| Weather | `components/apps/Weather.tsx` | Full |
 
 ## Design conventions
 

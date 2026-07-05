@@ -776,6 +776,98 @@ export const TRACKS: Track[] = [
     previewUrl:
       "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/46/56/69/46566970-f20e-553c-6db4-ce4934b49aa6/mzaf_16288982831865165666.plus.aac.p.m4a",
   },
+
+  // ───────── refined-search recoveries (scripts/refine-tracks.mjs) ─────────
+  {
+    id: "beg-you-a-touch-remastered",
+    title: "Beg You (A Touch - Remastered)",
+    artist: "Vybz Kartel",
+    album: "Beg You (Remastered) - Single",
+    duration: 187,
+    albumArt:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b5/b8/0b/b5b80b6e-e7c3-56db-41b9-293887c97496/195375486631_cover.jpg/600x600bb.jpg",
+    previewUrl:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/0a/3f/ab/0a3fab96-9b86-f8ca-4af8-6cc3b9793a0f/mzaf_10351316972660722088.plus.aac.p.m4a",
+  },
+  {
+    id: "what-s-going-on",
+    title: "What's Going On",
+    artist: "Marvin Gaye",
+    album: "What's Going On",
+    duration: 233,
+    albumArt:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/76/36/2d/76362d74-cb7a-8ef9-104e-cde1d858e9a9/20UMGIM95279.rgb.jpg/600x600bb.jpg",
+    previewUrl:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/08/f3/f4/08f3f452-b24f-e25b-92bc-15850f1bdc6a/mzaf_14002930736666872327.plus.aac.p.m4a",
+  },
+  {
+    id: "drive-feat-delilah-montagu-edit",
+    title: "Drive (feat. Delilah Montagu) [Edit]",
+    artist: "Black Coffee & David Guetta",
+    album: "Subconsciously",
+    duration: 191,
+    albumArt:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/ee/e2/a3/eee2a350-69df-8498-0ed0-caf8ccbdb37c/0617465024153.jpg/600x600bb.jpg",
+    previewUrl:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/11/a7/bb/11a7bbf7-f146-32df-7254-d516c0eb8ac3/mzaf_147823418081660732.plus.aac.p.m4a",
+  },
+
+  // ───────── added via Apple Music links (Jul 2026) ─────────
+  {
+    id: "ranger-feat-darkovibes",
+    title: "Ranger (feat. Darkovibes)",
+    artist: "Joey B",
+    album: "Darryl",
+    duration: 175,
+    albumArt:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/ee/2e/f9/ee2ef933-4af8-83ba-d064-20401fd83f6e/cover.jpg/600x600bb.jpg",
+    previewUrl:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/24/fd/53/24fd537c-aeda-8dc5-c544-fc0aed4702ba/mzaf_18121252028459647110.plus.aac.p.m4a",
+  },
+  {
+    id: "devil-knocking",
+    title: "Devil Knocking",
+    artist: "Kwesi Arthur",
+    album: "Live from Nkrumah Krom - EP",
+    duration: 265,
+    albumArt:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/86/7a/03/867a0380-5741-507e-c1f7-f44aa705a4ed/859720727977_cover.jpg/600x600bb.jpg",
+    previewUrl:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/79/00/8a/79008aa7-a7ba-763c-2505-af7407aa1efa/mzaf_2058053281482152074.plus.aac.p.m4a",
+  },
+  {
+    id: "gold",
+    title: "GOLD",
+    artist: "BROCKHAMPTON",
+    album: "SATURATION",
+    duration: 266,
+    albumArt:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/6a/18/8b/6a188b10-fcf2-f135-0064-422f1e2958e8/888915391655_cover.jpg/600x600bb.jpg",
+    previewUrl:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/71/6f/6a/716f6a8e-2116-bda9-6221-8ddcf52c45d8/mzaf_4803809406935396192.plus.aac.p.m4a",
+  },
+  {
+    id: "heat",
+    title: "HEAT",
+    artist: "BROCKHAMPTON",
+    album: "SATURATION",
+    duration: 272,
+    albumArt:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/6a/18/8b/6a188b10-fcf2-f135-0064-422f1e2958e8/888915391655_cover.jpg/600x600bb.jpg",
+    previewUrl:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/f7/e3/ac/f7e3ac96-ebd6-7d3d-9912-c06140f4603d/mzaf_12686956572362110206.plus.aac.p.m4a",
+  },
+  {
+    id: "star",
+    title: "STAR",
+    artist: "BROCKHAMPTON",
+    album: "SATURATION",
+    duration: 161,
+    albumArt:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/6a/18/8b/6a188b10-fcf2-f135-0064-422f1e2958e8/888915391655_cover.jpg/600x600bb.jpg",
+    previewUrl:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/02/96/e5/0296e567-1e37-d34a-c169-b020375c9b7c/mzaf_1528044225893473472.plus.aac.p.m4a",
+  },
 ];
 
 /* ============================= Playlists ============================= */
@@ -864,6 +956,14 @@ export const PLAYLISTS: Playlist[] = [
       "adventure-of-a-lifetime",
       "i-want-you-back",
       "billie-jean",
+      "beg-you-a-touch-remastered",
+      "what-s-going-on",
+      "drive-feat-delilah-montagu-edit",
+      "ranger-feat-darkovibes",
+      "devil-knocking",
+      "gold",
+      "heat",
+      "star",
     ],
   },
   {
@@ -886,6 +986,9 @@ export const PLAYLISTS: Playlist[] = [
       "remember",
       "gone-girl",
       "tonight",
+      "drive-feat-delilah-montagu-edit",
+      "ranger-feat-darkovibes",
+      "devil-knocking",
     ],
   },
   {
@@ -921,6 +1024,7 @@ export const PLAYLISTS: Playlist[] = [
       "coping-mechanism",
       "plastic-100-c",
       "kora-sings",
+      "what-s-going-on",
     ],
   },
   {
@@ -945,6 +1049,9 @@ export const PLAYLISTS: Playlist[] = [
       "six-paths",
       "pch",
       "better-now",
+      "heat",
+      "gold",
+      "star",
     ],
   },
 ];
