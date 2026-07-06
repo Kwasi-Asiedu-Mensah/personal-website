@@ -20,6 +20,9 @@ import Weather from "./apps/Weather";
 import Messages from "./apps/Messages";
 import Photos from "./apps/Photos";
 import ScreenOverlay from "./ScreenOverlay";
+import BootScreen from "./BootScreen";
+import DesktopIcons from "./DesktopIcons";
+import { useTrash } from "@/lib/trash";
 import Spotlight from "./Spotlight";
 import { useFilePreview } from "@/lib/file-preview";
 import { getFileContent } from "@/lib/file-contents";
@@ -133,6 +136,7 @@ export default function Desktop() {
   }, [brightness]);
 
   const [ctxMenu, setCtxMenu] = useState<{ x: number; y: number } | null>(null);
+  const { items: trashItems, putBackAll, empty: emptyTrash } = useTrash();
 
   // Include minimized windows so the dock dot persists — minimized ≠ closed.
   const openIds = new Set(
@@ -179,6 +183,8 @@ export default function Desktop() {
         />
       )}
 
+      <DesktopIcons onOpenFile={openFile} />
+
       <Menubar activeId={activeId} onOpenWindow={open} />
 
       <div className="absolute inset-0 pt-7">
@@ -223,6 +229,7 @@ export default function Desktop() {
         onTrashClick={() => openFinderAt("trash")}
         minimizedIds={minimizedIds}
         onRestore={(id) => open(id)}
+        trashFull={trashItems.length > 0}
       />
 
       <Spotlight
@@ -239,19 +246,36 @@ export default function Desktop() {
           onClose={() => setCtxMenu(null)}
           onChangeWallpaper={() => { open("settings"); setCtxMenu(null); }}
           onAbout={() => { open("settings"); setCtxMenu(null); }}
+          onNewNote={() => { open("notes"); setCtxMenu(null); }}
+          onOpenTerminal={() => { open("terminal"); setCtxMenu(null); }}
+          trashCount={trashItems.length}
+          onEmptyTrash={() => { emptyTrash(); setCtxMenu(null); }}
+          onPutBack={() => {
+            putBackAll();
+            window.dispatchEvent(new Event("desktop-restore-icons"));
+            setCtxMenu(null);
+          }}
         />
       )}
+
+      <BootScreen />
     </div>
   );
 }
 
 function DesktopContextMenu({
-  x, y, onClose, onChangeWallpaper, onAbout,
+  x, y, onClose, onChangeWallpaper, onAbout, onNewNote, onOpenTerminal,
+  trashCount, onEmptyTrash, onPutBack,
 }: {
   x: number; y: number;
   onClose: () => void;
   onChangeWallpaper: () => void;
   onAbout: () => void;
+  onNewNote: () => void;
+  onOpenTerminal: () => void;
+  trashCount: number;
+  onEmptyTrash: () => void;
+  onPutBack: () => void;
 }) {
   return (
     <>
@@ -276,7 +300,19 @@ function DesktopContextMenu({
         }}
         onContextMenu={(e) => e.preventDefault()}
       >
+        <CtxBtn onClick={onNewNote}>New Note</CtxBtn>
+        <CtxBtn onClick={onOpenTerminal}>Open Terminal</CtxBtn>
+        <div className="my-1 mx-2 h-px bg-white/10" />
         <CtxBtn onClick={onChangeWallpaper}>Change Wallpaper…</CtxBtn>
+        {trashCount > 0 && (
+          <>
+            <div className="my-1 mx-2 h-px bg-white/10" />
+            <CtxBtn onClick={onEmptyTrash}>
+              Empty Trash ({trashCount} item{trashCount === 1 ? "" : "s"})
+            </CtxBtn>
+            <CtxBtn onClick={onPutBack}>Put Items Back</CtxBtn>
+          </>
+        )}
         <div className="my-1 mx-2 h-px bg-white/10" />
         <CtxBtn onClick={onAbout}>About This Mac</CtxBtn>
       </div>

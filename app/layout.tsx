@@ -10,6 +10,7 @@ import { FilePreviewProvider } from "@/lib/file-preview";
 import { RecentsProvider } from "@/lib/recents";
 import { PlayerProvider } from "@/lib/player";
 import { AppNavigationProvider } from "@/lib/app-navigation";
+import { TrashProvider } from "@/lib/trash";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kwasiasiedumensah.com"),
@@ -67,7 +68,7 @@ try{var HAS=['snow-leopard','lion','mountain-lion','mavericks','yosemite','el-ca
                       <RecentsProvider>
                         <PlayerProvider>
                           <AppNavigationProvider>
-                            {children}
+                            <TrashProvider>{children}</TrashProvider>
                           </AppNavigationProvider>
                         </PlayerProvider>
                       </RecentsProvider>

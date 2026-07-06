@@ -14,6 +14,8 @@ type Props = {
   onTrashClick?: () => void;
   minimizedIds: Set<WindowId>;
   onRestore: (id: WindowId) => void;
+  /** Whether the trash has items in it. */
+  trashFull?: boolean;
 };
 
 export default function Dock({
@@ -23,6 +25,7 @@ export default function Dock({
   onTrashClick,
   minimizedIds,
   onRestore,
+  trashFull,
 }: Props) {
   const mouseX = useMotionValue(Infinity);
 
@@ -55,14 +58,28 @@ export default function Dock({
           }
           if (entry === "trash") {
             return (
-              <DockIcon
-                key="trash"
-                mouseX={mouseX}
-                label="Trash"
-                onClick={onTrashClick}
-              >
-                <TrashIcon />
-              </DockIcon>
+              <div key="trash" id="dock-trash" className="relative">
+                <DockIcon
+                  mouseX={mouseX}
+                  label={trashFull ? "Trash (full)" : "Trash"}
+                  onClick={onTrashClick}
+                >
+                  <span className="relative block w-full h-full">
+                    <TrashIcon />
+                    {trashFull && (
+                      <span
+                        className="absolute inset-x-0 top-[10%] mx-auto w-[55%] h-[26%] rounded-sm pointer-events-none"
+                        style={{
+                          background:
+                            "repeating-linear-gradient(135deg, #f5f5f5 0 3px, #d8d8d8 3px 6px)",
+                          boxShadow: "0 1px 2px rgba(0,0,0,0.35)",
+                        }}
+                        aria-hidden
+                      />
+                    )}
+                  </span>
+                </DockIcon>
+              </div>
             );
           }
           const app = APPS[entry];

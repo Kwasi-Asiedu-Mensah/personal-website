@@ -170,13 +170,6 @@ export default function Photos() {
             </button>
           ))}
         </div>
-        <div
-          className="px-2 pt-3 text-[11px] leading-snug"
-          style={{ color: "var(--window-text-faint)" }}
-        >
-          drop jpgs at /public/photos/photo-1.jpg … photo-24.jpg and they show
-          up here.
-        </div>
       </div>
 
       {/* grid */}

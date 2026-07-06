@@ -9,6 +9,7 @@ import {
 } from "react";
 import { useRecents, relativeTime } from "@/lib/recents";
 import { applicationsList, appByLabel } from "@/lib/app-config";
+import { trashSnapshot } from "@/lib/trash";
 import { useSessionState } from "@/lib/sidebar-persistence";
 
 /* ============================ App icons ============================ */
@@ -197,7 +198,18 @@ const VIRTUAL_FOLDERS: Record<string, FsItem> = {
 
 function getItemAtPath(path: string[]): FsItem | null {
   if (path[0] === VIRTUAL_ROOT_NAME) {
-    return path.length >= 2 ? (VIRTUAL_FOLDERS[path[1]] ?? null) : null;
+    const folder = path.length >= 2 ? (VIRTUAL_FOLDERS[path[1]] ?? null) : null;
+    // live-merge desktop files the visitor dragged into the trash
+    if (folder && path[1] === "trash") {
+      const live = trashSnapshot().map((t) => ({
+        name: t.name,
+        type: "file" as const,
+        ext: t.ext,
+        modified: "Today",
+      }));
+      return { ...folder, children: [...live, ...(folder.children ?? [])] };
+    }
+    return folder;
   }
   if (path[0] !== HOME_NAME) return null;
   let node: FsItem = FILESYSTEM;
