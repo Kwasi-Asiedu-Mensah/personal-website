@@ -97,6 +97,13 @@ const RULES: Rule[] = [
     ],
   },
   {
+    match: /who('s| is| are)? (you|kwasi|this)/i,
+    pool: [
+      "i'm the scripted stand-in. the real one built everything you're looking at — the notes app is the best introduction.",
+      "a few hundred lines of typescript doing an impression of the guy who wrote them.",
+    ],
+  },
+  {
     match: /\?$/,
     pool: [
       "good question. i'm a scripted guestbook though — the real kwasi answers that one.",
@@ -104,6 +111,22 @@ const RULES: Rule[] = [
     ],
   },
 ];
+
+/** Optional second bubble for some intents — the double-text. */
+function followUpFor(input: string, visitorName: string | null): string | null {
+  if (/^(hi|hey|hello|yo|sup|hiya|howdy)\b/i.test(input) && !visitorName) {
+    return "what should i call you?";
+  }
+  if (/(build|built|made|stack|tech)/i.test(input)) {
+    return "the code tour is in the terminal — type `help` and wander.";
+  }
+  if (/(cool|nice|awesome|amazing|love|dope|sick|impressive|fire)\b/i.test(input) && Math.random() < 0.5) {
+    return "the photos app is new, by the way. real camera roll.";
+  }
+  return null;
+}
+
+const STARTERS = ["how was this built?", "who's kwasi?", "any music tips?"];
 
 const FALLBACKS = [
   "noted. this whole inbox lives in your browser, by the way — nothing you type leaves this tab.",
@@ -201,8 +224,8 @@ export default function Messages() {
     if (el) el.scrollTop = el.scrollHeight;
   }, [guestbook, typing, thread]);
 
-  function send() {
-    const text = draft.trim();
+  function send(preset?: string) {
+    const text = (preset ?? draft).trim();
     if (!text) return;
     setDraft("");
     setGuestbook((prev) => [
@@ -220,6 +243,7 @@ export default function Messages() {
         // ignore
       }
     }
+    const followUp = followUpFor(text, visitorName.current);
     // typing time scales loosely with reply length, like a person
     const delay = 700 + reply.length * 12 + Math.random() * 600;
     setTimeout(() => {
@@ -228,6 +252,21 @@ export default function Messages() {
         ...prev,
         { id: String(Date.now() + 1), from: "them", text: reply, ts: Date.now() },
       ]);
+      if (followUp) {
+        setTimeout(() => setTyping(true), 400);
+        setTimeout(() => {
+          setTyping(false);
+          setGuestbook((prev) => [
+            ...prev,
+            {
+              id: String(Date.now() + 2),
+              from: "them",
+              text: followUp,
+              ts: Date.now(),
+            },
+          ]);
+        }, 400 + Math.min(500 + followUp.length * 12, 1800));
+      }
     }, Math.min(delay, 2600));
   }
 
@@ -312,26 +351,44 @@ export default function Messages() {
           ref={scrollRef}
           className="flex-1 overflow-y-auto px-4 py-4 space-y-1.5"
         >
-          {messages.map((m) => (
-            <div
-              key={m.id}
-              className={`flex ${m.from === "me" ? "justify-end" : "justify-start"}`}
-            >
-              <div
-                className="max-w-[70%] px-3 py-1.5 rounded-2xl text-[13px] leading-snug"
-                style={
-                  m.from === "me"
-                    ? { background: "#0a84ff", color: "#ffffff" }
-                    : {
-                        background: "var(--row-active)",
-                        color: "var(--window-text)",
-                      }
-                }
-              >
-                {m.text}
+          {messages.map((m, idx) => {
+            const lastMeIdx = messages
+              .map((x) => x.from)
+              .lastIndexOf("me");
+            const isLastMe = m.from === "me" && idx === lastMeIdx;
+            const answered =
+              isLastMe &&
+              (typing || messages.slice(idx + 1).some((x) => x.from === "them"));
+            return (
+              <div key={m.id}>
+                <div
+                  className={`flex ${m.from === "me" ? "justify-end" : "justify-start"}`}
+                >
+                  <div
+                    className="max-w-[70%] px-3 py-1.5 rounded-2xl text-[13px] leading-snug"
+                    style={
+                      m.from === "me"
+                        ? { background: "#0a84ff", color: "#ffffff" }
+                        : {
+                            background: "var(--row-active)",
+                            color: "var(--window-text)",
+                          }
+                    }
+                  >
+                    {m.text}
+                  </div>
+                </div>
+                {isLastMe && thread === "kwasi" && (
+                  <div
+                    className="text-right text-[10px] mt-0.5 pr-1"
+                    style={{ color: "var(--window-text-faint)" }}
+                  >
+                    {answered ? "read" : "delivered"}
+                  </div>
+                )}
               </div>
-            </div>
-          ))}
+            );
+          })}
           {typing && thread === "kwasi" && (
             <div className="flex justify-start">
               <div
@@ -346,6 +403,26 @@ export default function Messages() {
             </div>
           )}
         </div>
+
+        {/* starter chips */}
+        {thread === "kwasi" && guestbook.length <= 2 && !typing && (
+          <div className="px-3 pb-1.5 flex gap-1.5 flex-wrap">
+            {STARTERS.map((s) => (
+              <button
+                key={s}
+                onClick={() => send(s)}
+                className="px-2.5 py-1 rounded-full text-[12px]"
+                style={{
+                  border: "1px solid var(--searchbar-border)",
+                  color: "var(--window-text-muted)",
+                  background: "var(--searchbar-bg)",
+                }}
+              >
+                {s}
+              </button>
+            ))}
+          </div>
+        )}
 
         {/* composer */}
         {thread === "kwasi" ? (
@@ -368,7 +445,7 @@ export default function Messages() {
               }}
             />
             <button
-              onClick={send}
+              onClick={() => send()}
               disabled={!draft.trim()}
               className="w-7 h-7 rounded-full flex items-center justify-center text-white text-[13px] disabled:opacity-30"
               style={{ background: "#0a84ff" }}

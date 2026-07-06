@@ -32,7 +32,7 @@ const WALLPAPER_PHOTOS: Photo[] = [
   album: "wallpapers",
 }));
 
-const DROPPED_CANDIDATES = Array.from({ length: 24 }, (_, i) => ({
+const DROPPED_CANDIDATES = Array.from({ length: 48 }, (_, i) => ({
   id: `ph-${i + 1}`,
   url: `/photos/photo-${i + 1}.jpg`,
   label: `photo ${i + 1}`,
