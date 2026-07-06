@@ -403,14 +403,22 @@ function MessagesSVG() {
     >
       <defs>
         <linearGradient id="messages-bg" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#6BE07A" />
-          <stop offset="100%" stopColor="#27B43E" />
+          <stop offset="0%" stopColor="#5BF675" />
+          <stop offset="100%" stopColor="#0CBD2A" />
         </linearGradient>
       </defs>
-      <rect width="64" height="64" rx="13" fill="url(#messages-bg)" />
-      {/* speech bubble */}
+      <rect width="64" height="64" rx="14.5" fill="url(#messages-bg)" />
+      {/* speech bubble with tail, à la imessage */}
       <path
-        d="M 32 14 C 20.4 14 11 21.8 11 31.4 C 11 36.9 14.1 41.8 19 45 C 18.6 47.5 17.3 50 15.4 51.9 C 18.9 51.6 22.2 50.3 24.7 48.3 C 27 49 29.4 49.4 32 49.4 C 43.6 49.4 53 41.1 53 31.4 C 53 21.8 43.6 14 32 14 Z"
+        d="M 32 12.5
+           C 19.6 12.5 9.5 20.9 9.5 31.3
+           C 9.5 37.1 12.6 42.3 17.6 45.7
+           C 17.4 48.4 16.2 51.1 14.2 53.2
+           C 13.8 53.6 14.1 54.3 14.7 54.2
+           C 18.9 53.7 22.6 52.1 25.3 49.8
+           C 27.4 50.3 29.7 50.6 32 50.6
+           C 44.4 50.6 54.5 41.8 54.5 31.3
+           C 54.5 20.9 44.4 12.5 32 12.5 Z"
         fill="#FFFFFF"
       />
     </svg>
@@ -430,15 +438,16 @@ export function MessagesIcon() {
 /* -------------------------------- Photos -------------------------------- */
 
 function PhotosSVG() {
+  // 8 translucent petals, each tilted off its spoke like the real pinwheel
   const petals = [
-    { color: "#F5C400", rot: 0 },
-    { color: "#F0A03C", rot: 45 },
-    { color: "#E9573F", rot: 90 },
-    { color: "#D23A6C", rot: 135 },
-    { color: "#8F4FBF", rot: 180 },
-    { color: "#3B77D8", rot: 225 },
-    { color: "#33A8DA", rot: 270 },
-    { color: "#59BC5B", rot: 315 },
+    { color: "#FFCC00", rot: 0 },
+    { color: "#FF9500", rot: 45 },
+    { color: "#FF3B30", rot: 90 },
+    { color: "#FF2D95", rot: 135 },
+    { color: "#AF52DE", rot: 180 },
+    { color: "#007AFF", rot: 225 },
+    { color: "#54BEF0", rot: 270 },
+    { color: "#34C759", rot: 315 },
   ];
   return (
     <svg
@@ -446,19 +455,20 @@ function PhotosSVG() {
       xmlns="http://www.w3.org/2000/svg"
       className="w-full h-full"
     >
-      <rect width="64" height="64" rx="13" fill="#FFFFFF" />
+      <rect width="64" height="64" rx="14.5" fill="#FFFFFF" />
       <g transform="translate(32 32)">
         {petals.map((p) => (
-          <ellipse
-            key={p.rot}
-            cx="0"
-            cy="-12"
-            rx="6"
-            ry="12"
-            fill={p.color}
-            opacity="0.85"
-            transform={`rotate(${p.rot})`}
-          />
+          <g key={p.rot} transform={`rotate(${p.rot})`}>
+            <path
+              d="M 0 -2
+                 C -7.5 -6 -9.5 -16.5 -4.5 -23.5
+                 C -2 -27 2.5 -27.5 5 -24.5
+                 C 10 -17.5 7.5 -6.5 0 -2 Z"
+              fill={p.color}
+              opacity="0.78"
+              style={{ mixBlendMode: "multiply" }}
+            />
+          </g>
         ))}
       </g>
     </svg>

@@ -21,16 +21,117 @@ type Msg = {
 
 const STORAGE_KEY = "messages-guestbook";
 
-const AUTO_REPLIES = [
-  "hey — thanks for stopping by.",
-  "fun fact: this whole inbox lives in your browser. nothing you type leaves this tab.",
-  "have you tried dragging these windows around? go on.",
-  "the music app has my actual rotation. start with the on-repeat playlist.",
-  "if you break something, refresh. the desktop remembers most things.",
-  "type `help` in the terminal — it knows more than it lets on.",
-  "still here? open settings and change the wallpaper. treat yourself.",
-  "ok i'm out of scripted replies. it was nice talking. sort of.",
+/**
+ * Tiny intent engine. Each rule: match patterns → reply pool. First rule
+ * that matches wins; a random reply from its pool is used (avoiding the
+ * immediately previous reply). Falls back to a rotating small-talk pool.
+ */
+type Rule = { match: RegExp; pool: string[] };
+
+const NAME_RE =
+  /(?:i'?m|i am|my name'?s|my name is|name'?s|call me)\s+([a-z][a-z'-]{1,20})/i;
+
+const RULES: Rule[] = [
+  {
+    match: /^(hi|hey|hello|yo|sup|hiya|howdy|good (morning|afternoon|evening))\b/i,
+    pool: [
+      "hey. welcome to the desktop.",
+      "yo. make yourself at home — the windows drag.",
+      "hey hey. poke around, nothing here bites.",
+    ],
+  },
+  {
+    match: /how (are|r) (you|u)|how'?s it going|you good/i,
+    pool: [
+      "running at 60fps, thanks for asking. you?",
+      "all processes nominal. how are you doing?",
+    ],
+  },
+  {
+    match: /(how|what).*(build|built|made|make|stack|tech|framework|code)/i,
+    pool: [
+      "next.js 14, typescript, tailwind, framer motion. no backend — the whole desktop is client-side.",
+      "it's all react — every window, the dock, even this conversation. state lives in your browser's localstorage.",
+      "hand-rolled window manager: drag, 8-way resize, z-index layers. no libraries for the windowing.",
+    ],
+  },
+  {
+    match: /music|song|playlist|track|listen/i,
+    pool: [
+      "the music app has the actual rotation. start with on-repeat.",
+      "open the music app — the on-repeat note in notes links straight into it.",
+    ],
+  },
+  {
+    match: /photo|picture|image|gallery/i,
+    pool: ["there's a photos app in the dock now. real camera roll energy."],
+  },
+  {
+    match: /terminal|command|hack/i,
+    pool: ["type `help` in the terminal — it knows more than it lets on."],
+  },
+  {
+    match: /wallpaper|theme|dark mode|background/i,
+    pool: ["system settings → appearance. the wallpapers are worth the click."],
+  },
+  {
+    match: /contact|email|hire|job|work with|reach (you|him)|linkedin/i,
+    pool: [
+      "the real inbox lives outside this site — look around the desktop for links.",
+      "this thread stays in your browser, so for real contact, check the notes app.",
+    ],
+  },
+  {
+    match: /(cool|nice|awesome|amazing|love|dope|sick|impressive|fire)\b/i,
+    pool: [
+      "appreciated. it was mostly a lot of css.",
+      "thanks — tell your friends there's a mac in a browser somewhere.",
+      "glad it lands. try breaking it, it's sturdier than it looks.",
+    ],
+  },
+  {
+    match: /(bye|goodbye|later|cya|see you|gtg|good night)\b/i,
+    pool: [
+      "later. the desktop will remember you were here.",
+      "bye — the windows will stay where you left them.",
+    ],
+  },
+  {
+    match: /\?$/,
+    pool: [
+      "good question. i'm a scripted guestbook though — the real kwasi answers that one.",
+      "above my pay grade — i'm client-side. but keep exploring, most answers are on this desktop.",
+    ],
+  },
 ];
+
+const FALLBACKS = [
+  "noted. this whole inbox lives in your browser, by the way — nothing you type leaves this tab.",
+  "have you tried dragging these windows around? go on.",
+  "if you break something, refresh. the desktop remembers most things.",
+  "still here? open settings and change the wallpaper. treat yourself.",
+  "the notes app is where the actual writing lives.",
+  "ok, i'm mostly scripted — but you're keeping me on my toes.",
+];
+
+function pickReply(input: string, lastReply: string, visitorName: string | null): { reply: string; name: string | null } {
+  const nameMatch = input.match(NAME_RE);
+  if (nameMatch) {
+    const name = nameMatch[1].toLowerCase();
+    return {
+      reply: `nice to meet you, ${name}. i'd shake your hand but i'm two divs and a border-radius.`,
+      name,
+    };
+  }
+  const pools = RULES.filter((r) => r.match.test(input)).map((r) => r.pool);
+  const pool = pools.length > 0 ? pools[0] : FALLBACKS;
+  const options = pool.filter((p) => p !== lastReply);
+  let reply = options[Math.floor(Math.random() * options.length)] ?? pool[0];
+  if (visitorName && Math.random() < 0.25) {
+    reply = `${visitorName} — ${reply}`;
+  }
+  return { reply, name: visitorName };
+}
 
 const TIPS_THREAD: Msg[] = [
   { id: "t1", from: "them", text: "welcome to the desktop. a few things worth knowing —", ts: 0 },
@@ -70,12 +171,19 @@ export default function Messages() {
   const [typing, setTyping] = useState(false);
   const [hydrated, setHydrated] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const replyCount = useRef(0);
+  const lastReply = useRef("");
+  const visitorName = useRef<string | null>(null);
 
   useEffect(() => {
     const msgs = loadGuestbook();
     setGuestbook(msgs);
-    replyCount.current = msgs.filter((m) => m.from === "them").length - 1;
+    const lastThem = [...msgs].reverse().find((m) => m.from === "them");
+    if (lastThem) lastReply.current = lastThem.text;
+    try {
+      visitorName.current = localStorage.getItem("messages-visitor-name");
+    } catch {
+      // ignore
+    }
     setHydrated(true);
   }, []);
 
@@ -102,16 +210,25 @@ export default function Messages() {
       { id: String(Date.now()), from: "me", text, ts: Date.now() },
     ]);
     setTyping(true);
-    const reply =
-      AUTO_REPLIES[Math.min(replyCount.current, AUTO_REPLIES.length - 1)];
-    replyCount.current += 1;
+    const { reply, name } = pickReply(text, lastReply.current, visitorName.current);
+    lastReply.current = reply;
+    if (name && name !== visitorName.current) {
+      visitorName.current = name;
+      try {
+        localStorage.setItem("messages-visitor-name", name);
+      } catch {
+        // ignore
+      }
+    }
+    // typing time scales loosely with reply length, like a person
+    const delay = 700 + reply.length * 12 + Math.random() * 600;
     setTimeout(() => {
       setTyping(false);
       setGuestbook((prev) => [
         ...prev,
         { id: String(Date.now() + 1), from: "them", text: reply, ts: Date.now() },
       ]);
-    }, 900 + Math.random() * 700);
+    }, Math.min(delay, 2600));
   }
 
   const messages = thread === "kwasi" ? guestbook : TIPS_THREAD;
