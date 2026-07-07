@@ -132,7 +132,7 @@ export default function MobileLayout() {
             explore →
           </button>
           <p className="text-white/40 text-[12px]">
-            the full desktop lives on a bigger screen
+            best experienced on desktop
           </p>
         </div>
       </div>
